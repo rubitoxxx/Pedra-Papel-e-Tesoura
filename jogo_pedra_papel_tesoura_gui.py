@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 import random
 from tkinter import messagebox
+from PIL import Image, ImageTk
+import os
 
 class JogoPedraPapelTesouraGUI:
     def __init__(self, root):
@@ -42,6 +44,38 @@ class JogoPedraPapelTesouraGUI:
         self.criar_interface()
         
     def criar_interface(self):
+        # Frame para a imagem
+        imagem_frame = tk.Frame(self.root, bg='#1a1a2e')
+        imagem_frame.pack(pady=10)
+        
+        # Carregar e exibir a imagem
+        try:
+            # Carregar a imagem
+            imagem_original = Image.open("gokuvsvegita.png")
+            # Redimensionar a imagem para um tamanho adequado
+            imagem_redimensionada = imagem_original.resize((300, 200), Image.Resampling.LANCZOS)
+            self.imagem_tk = ImageTk.PhotoImage(imagem_redimensionada)
+            
+            # Criar label para exibir a imagem
+            imagem_label = tk.Label(
+                imagem_frame,
+                image=self.imagem_tk,
+                bg='#1a1a2e'
+            )
+            imagem_label.pack()
+            
+        except Exception as e:
+            print(f"Erro ao carregar a imagem: {e}")
+            # Se não conseguir carregar a imagem, criar um label de texto
+            imagem_label = tk.Label(
+                imagem_frame,
+                text="🎮 Goku vs Vegeta",
+                font=("Arial", 16, "bold"),
+                bg='#1a1a2e',
+                fg='white'
+            )
+            imagem_label.pack()
+        
         # Título principal
         titulo = tk.Label(
             self.root,
