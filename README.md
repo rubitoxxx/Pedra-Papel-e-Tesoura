@@ -120,10 +120,12 @@ def gerar_frase(jogada_ia, jogada_usuario, resultado):
 
 ## 🙋‍♂️ Autor
 
-**Projeto Demonstrativo de IA Generativa**  
-🎮 Desenvolvido para fins educacionais  
-🤖 Foco em aplicações práticas de IA no desenvolvimento de jogos
+**Rubens Gabriel e Silva Santos**  
+📫 [rubensgabrielesilvasantos@gmail.com](mailto:rubensgabrielesilvasantos@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/rubens-gabriel-221679263)  
+💻 [GitHub](https://github.com/rubitoxxx)
 
 ---
 
 > Projeto educacional — Demonstração de IA Generativa aplicada ao desenvolvimento de jogos 🚀
+
